@@ -1,35 +1,20 @@
+
 default:
   target: dev
   outputs:
     dev:
-      type: your_database_type
-      host: your_host
-      user: your_user
-      password: your_password
-      port: your_port
-      dbname: your_dbname
-      schema: your_schema
+      type: duckdb
+      path: 'dbt.duckdb'
+      schema: main
     qua:
-      type: your_database_type
-      host: your_host
-      user: your_user
-      password: your_password
-      port: your_port
-      dbname: your_dbname
-      schema: your_schema
+      type: duckdb
+      path: 'dbt.duckdb'
+      schema: qua
     prd:
-      type: your_database_type
-      host: your_host
-      user: your_user
-      password: your_password
-      port: your_port
-      dbname: your_dbname
-      schema: your_schema
+      type: duckdb
+      path: 'dbt.duckdb'
+      schema: prd
     feature:
-      type: your_database_type
-      host: your_host
-      user: your_user
-      password: your_password
-      port: your_port
-      dbname: your_dbname
-      schema: your_schema
+      type: duckdb
+      path: 'dbt.duckdb'
+      schema: "{{ env_var('DBT_FEATURE_SCHEMA') }}"

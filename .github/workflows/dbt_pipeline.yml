@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install dbt-core
+          pip install dbt-duckdb
 
       - name: Run dbt
         run: |
@@ -38,5 +38,7 @@ jobs:
           elif [[ "${{ github.ref }}" == "refs/heads/qua" ]]; then
             dbt run --target qua
           else
-            dbt run --target feature --vars '{ "schema_name": "${{ github.head_ref }}" }'
+            dbt run --target feature
+        env:
+          DBT_FEATURE_SCHEMA: ${{ github.head_ref }}
           fi
