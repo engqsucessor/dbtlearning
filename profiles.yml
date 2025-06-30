@@ -1,0 +1,35 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: your_database_type
+      host: your_host
+      user: your_user
+      password: your_password
+      port: your_port
+      dbname: your_dbname
+      schema: your_schema
+    qua:
+      type: your_database_type
+      host: your_host
+      user: your_user
+      password: your_password
+      port: your_port
+      dbname: your_dbname
+      schema: your_schema
+    prd:
+      type: your_database_type
+      host: your_host
+      user: your_user
+      password: your_password
+      port: your_port
+      dbname: your_dbname
+      schema: your_schema
+    feature:
+      type: your_database_type
+      host: your_host
+      user: your_user
+      password: your_password
+      port: your_port
+      dbname: your_dbname
+      schema: your_schema
