@@ -2,3 +2,5 @@ logs/
 target/
 dbt_modules/
 .dbt/
+my_dbt_project/*.db
+my_dbt_project/.user.yml
