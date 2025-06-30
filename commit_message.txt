@@ -1,0 +1,1 @@
+feat: configure DuckDB and add test model for schema generation
