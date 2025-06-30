@@ -4,11 +4,13 @@ This repository contains a simple dbt project configured to run with DuckDB.
 
 ## Setup
 
-1. Install the adapter:
+1. Create an isolated environment using [`uv`](https://github.com/astral-sh/uv):
    ```bash
-   pip install dbt-duckdb
+   uv venv .venv
+   source .venv/bin/activate
+   uv pip install dbt-duckdb
    ```
-2. Create a `profiles.yml` in `~/.dbt/` with a DuckDB profile:
+2. Create a `profiles.yml` (one is provided in `my_dbt_project/profiles.yml`):
    ```yaml
    my_dbt_project:
      target: dev
