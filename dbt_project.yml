@@ -1,9 +1,0 @@
-name: 'dbtlearning'
-version: '1.0.0'
-config-version: 2
-
-profile: 'default'
-
-models:
-  dbtlearning:
-    +materialized: view
